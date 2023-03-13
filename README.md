@@ -16,7 +16,7 @@
 ┗ Raquel
 	
 Scrum Master - Raquel
-Atigo - Beatriz
+Artigo - Beatriz
 Developers - Kaique (Back-End) ;
 Henrique C. (Back-End) ;
 Bruna (Front-End) ;
