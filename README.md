@@ -5,12 +5,12 @@
 
 ┏ 📄 ミ★ 𝘐𝘕𝘛𝘌𝘎𝘙𝘈𝘕𝘛𝘌𝘚 ★彡
 
-┣ 💻 Beatriz - Artigo
+┣ 👨‍💻 Beatriz - Artigo
 
-┣ 💻 Bruna - Developer (Front - End)
+┣ 👨‍💻 Bruna - Developer (Front - End)
 
-┣ 💻 Henrique C. - Developer (Back - End)
+┣ 👨‍💻 Henrique C. - Developer (Back - End)
 
-┣ 💻 Kaique - Developer (Back - End)
+┣ 👨‍💻 Kaique - Developer (Back - End)
 
-┗ 💻 Raquel - Scrum Master
+┗ 👨‍💻 Raquel - Scrum Master
