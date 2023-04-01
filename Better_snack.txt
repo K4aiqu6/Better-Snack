@@ -1,0 +1,55 @@
+CREATE TABLE usuarios (
+    id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    senha VARCHAR(255) NOT NULL,
+    data_nascimento DATE,
+    cidade VARCHAR(255),
+    estado VARCHAR(255)
+);
+
+CREATE TABLE categorias (
+    id_categoria INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT
+);
+
+CREATE TABLE curtidas (
+    id_curtida INT PRIMARY KEY AUTO_INCREMENT,
+    id_usuario INT NOT NULL,
+    id_receita INT NOT NULL,
+    data_hora_curtida DATETIME NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY (id_receita) REFERENCES receitas(id_receita)
+);
+
+CREATE TABLE logins (
+    id_login INT PRIMARY KEY AUTO_INCREMENT,
+    id_usuario INT NOT NULL,
+    data_hora_login DATETIME NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
+);
+
+CREATE TABLE perfis (
+    id_perfil INT PRIMARY KEY AUTO_INCREMENT,
+    id_usuario INT NOT NULL,
+    nome_exibicao VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    imagem_perfil VARCHAR(255),
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario)
+);
+
+CREATE TABLE receitas (
+    id_receita INT PRIMARY KEY AUTO_INCREMENT,
+    id_usuario INT NOT NULL,
+    id_categoria INT NOT NULL,
+    titulo VARCHAR(255) NOT NULL,
+    ingredientes TEXT NOT NULL,
+    modo_preparo TEXT NOT NULL,
+    tempo_preparo INT,
+    porcoes INT,
+    imagem_receita VARCHAR(255),
+    data_publicacao DATETIME NOT NULL,
+    FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario),
+    FOREIGN KEY (id_categoria) REFERENCES categorias(id_categoria)
+);
